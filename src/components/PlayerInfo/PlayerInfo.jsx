@@ -12,7 +12,7 @@ export default function PlayerInfo({name, symbol, isActive}) {
     setPlayerName(event.target.value);
   }
 
-  return (<li className={isActive && 'active'}>
+  return (<li className={isActive ? 'active' : ''}>
     <span className="player">
       {isEditing ? (<input type="text" required value={playerName} onChange={onSetPlayerName}/>) :
         (<span className="player-name">{playerName}</span>)}
